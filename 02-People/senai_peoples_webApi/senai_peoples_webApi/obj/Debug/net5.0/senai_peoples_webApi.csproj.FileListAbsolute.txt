@@ -1,0 +1,6 @@
+C:\Users\juanv\Desktop\DEV\2DM\senai_sprint2_back-end\02-People\senai_peoples_webApi\senai_peoples_webApi\obj\Debug\net5.0\senai_peoples_webApi.csprojAssemblyReference.cache
+C:\Users\juanv\Desktop\DEV\2DM\senai_sprint2_back-end\02-People\senai_peoples_webApi\senai_peoples_webApi\obj\Debug\net5.0\senai_peoples_webApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\juanv\Desktop\DEV\2DM\senai_sprint2_back-end\02-People\senai_peoples_webApi\senai_peoples_webApi\obj\Debug\net5.0\senai_peoples_webApi.AssemblyInfoInputs.cache
+C:\Users\juanv\Desktop\DEV\2DM\senai_sprint2_back-end\02-People\senai_peoples_webApi\senai_peoples_webApi\obj\Debug\net5.0\senai_peoples_webApi.AssemblyInfo.cs
+C:\Users\juanv\Desktop\DEV\2DM\senai_sprint2_back-end\02-People\senai_peoples_webApi\senai_peoples_webApi\obj\Debug\net5.0\senai_peoples_webApi.csproj.CoreCompileInputs.cache
+C:\Users\juanv\Desktop\DEV\2DM\senai_sprint2_back-end\02-People\senai_peoples_webApi\senai_peoples_webApi\obj\Debug\net5.0\senai_peoples_webApi.MvcApplicationPartsAssemblyInfo.cache
