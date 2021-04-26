@@ -1,18 +1,15 @@
-USE InLock_Games_Manha;
+insert into TipoUsuario(Titulo)
+values ('Administrador'),
+	   ('Usuario')
 
-INSERT INTO TipoUsuarios(titulo)
-VALUES					('Administrador'),
-						('Cliente');
+insert into Usuario(Email, Senha, IdTipoUsuario)
+values ('anaotaria@gmail.com', 'ana123', 1),
+	   ('nicolasbobao@gmail.com', 'nicolas123', 2)
 
-INSERT INTO Usuarios(Email, Senha, IdTipoUsuario)
-VALUES ('admin@admin.com', 'admin', 1),
-	   ('cliente@cliente.com', 'cliente', 2);
+insert into Estudio(EstudioNome)
+values ('Rockstar'),
+	   ('Blizzard')
 
-INSERT INTO Estudios(nomeEstudio)
-VALUES ('Blizzard'),
-	   ('Rockstar Studios'),
-	   ('Square Enix');
-
-INSERT INTO Jogos(idEstudio, nomeJogo, descricao, dataLancamento, valor)
-VALUES			 (   1, 'Diablo 3', 'é um jogo que contém bastante ação e é viciante, seja você um novato ou um fã', '15-05-2002', 99.00),
-				 (   2, 'Red Dead Redemption II,', 'jogo eletrônico de ação-aventura western', '26-10-2018', 120.00);
+insert into Jogos(NomeJogo, Descricao, Preco,DataLanc , IdEstudio)
+values ('GTA San Andreas', 'mate velhas a vontade, não é crime', 5.90,'26-10-2004', 1),
+	   ('Overwatch', 'im already tracer', 59.90, '27-10-2015', 2)

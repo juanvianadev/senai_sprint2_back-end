@@ -1,34 +1,33 @@
-CREATE DATABASE InLock_Games_Manha;
+create database InLock;
+go
 
-USE InLock_Games_Manha;
+use  InLock;
 
-CREATE TABLE Estudios
-(
-	idEstudio			INT PRIMARY KEY IDENTITY
-	,nomeEstudio		VARCHAR(200) NOT NULL
+create table TipoUsuario(
+IdTipoUsuario int primary key identity,
+Titulo varchar(200)
 );
+go
 
-CREATE TABLE Jogos
-(
-	idJogo				INT PRIMARY KEY IDENTITY
-	,idEstudio			INT FOREIGN KEY REFERENCES Estudios (idEstudio)
-	,nomeJogo			VARCHAR(200) NOT NULL
-	,descricao			VARCHAR(150) NOT NULL
-	,dataLancamento		DATE
-	,valor				FLOAT
+create table Usuario(
+IdUsuario int primary key identity,
+Email varchar (200),
+Senha varchar(200),
+IdTipoUsuario int foreign key references TipoUsuario(IdTipoUsuario)
 );
+go 
 
-CREATE TABLE TipoUsuarios
-(
-	idTipoUsuario		INT PRIMARY KEY IDENTITY
-	,titulo				VARCHAR(200) NOT NULL
-);
+create table Estudio(
+IdEstudio int primary key identity,
+EstudioNome varchar(200)
+)
 
-CREATE TABLE Usuarios
-(
-	idUsuario			INT PRIMARY KEY IDENTITY
-	,idTipoUsuario		INT FOREIGN KEY REFERENCES TipoUsuarios (idTipoUsuario)
-	,titulo				VARCHAR(200)
-	,email				VARCHAR(150) NOT NULL
-	,senha				VARCHAR(150) NOT NULL
+create table Jogos(
+IdJogo  int primary key identity,
+NomeJogo varchar(200),
+Descricao varchar(200),
+Preco float,
+DataLanc date, 
+IdEstudio int foreign key references Estudio(IdEstudio)
 );
+go 
