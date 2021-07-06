@@ -16,10 +16,10 @@ namespace SPMedicalGroup_WebAPI.Repositories
         {
             TiposUsuario tipoUsuario = BuscarPorId(id);
 
-            if (tipoUsuarioAtualizado.Titulo != null)
+            if (tipoUsuarioAtualizado.Tipo != null)
             {
                 tipoUsuario.IdTipoUsuario = tipoUsuarioAtualizado.IdTipoUsuario;
-                tipoUsuario.Titulo = tipoUsuarioAtualizado.Titulo;
+                tipoUsuario.Tipo = tipoUsuarioAtualizado.Tipo;
             }
 
             ctx.TiposUsuarios.Update(tipoUsuario);

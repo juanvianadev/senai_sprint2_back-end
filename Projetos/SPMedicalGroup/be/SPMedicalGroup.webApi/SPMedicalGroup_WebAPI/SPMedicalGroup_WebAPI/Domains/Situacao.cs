@@ -13,7 +13,7 @@ namespace SPMedicalGroup_WebAPI.Domains
         }
 
         public int IdSituacao { get; set; }
-        public string Titulo { get; set; }
+        public string Situacao1 { get; set; }
 
         public virtual ICollection<Consulta> Consulta { get; set; }
     }

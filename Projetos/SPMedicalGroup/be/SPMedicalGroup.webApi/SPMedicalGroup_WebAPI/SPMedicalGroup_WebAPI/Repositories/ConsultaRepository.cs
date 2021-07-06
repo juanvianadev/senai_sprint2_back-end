@@ -29,7 +29,7 @@ namespace SPMedicalGroup_WebAPI.Repositories
                 consulta.Descricao = descricao;
             }
 
-            ctx.Consultas.Update(consulta);
+            ctx.Consulta.Update(consulta);
 
             ctx.SaveChanges();
         }
@@ -43,21 +43,21 @@ namespace SPMedicalGroup_WebAPI.Repositories
                 consulta.IdSituacao = idSituacao;
             }
 
-            ctx.Consultas.Update(consulta);
+            ctx.Consulta.Update(consulta);
 
             ctx.SaveChanges();
         }
 
         public Consulta BuscarPorId(int id)
         {
-            return ctx.Consultas.Find(id);
+            return ctx.Consulta.Find(id);
         }
 
         public void Cadastrar(Consulta consulta)
         {
             consulta.IdSituacao = 1;
 
-            ctx.Consultas.Add(consulta);
+            ctx.Consulta.Add(consulta);
 
             ctx.SaveChanges();
         }
@@ -66,19 +66,19 @@ namespace SPMedicalGroup_WebAPI.Repositories
         {
             Consulta consulta = BuscarPorId(id);
 
-            ctx.Consultas.Remove(consulta);
+            ctx.Consulta.Remove(consulta);
 
             ctx.SaveChanges();
         }
 
         public List<Consulta> ListarTodos()
         {
-            return ctx.Consultas.ToList();
+            return ctx.Consulta.ToList();
         }
 
         public List<Consulta> MinhasConsultas(int id)
         {
-            return ctx.Consultas
+            return ctx.Consulta
                 .Include(c => c.IdPacienteNavigation)
                 .Include(c => c.IdMedicoNavigation).ThenInclude(c => c.IdEspecialidadeNavigation)
                 .Select(c => new Consulta
@@ -111,7 +111,7 @@ namespace SPMedicalGroup_WebAPI.Repositories
                         IdEspecialidadeNavigation = new Especialidade
                         {
                             IdEspecialidade = c.IdMedicoNavigation.IdEspecialidadeNavigation.IdEspecialidade,
-                            Titulo = c.IdMedicoNavigation.IdEspecialidadeNavigation.Titulo
+                            Especialidade1 = c.IdMedicoNavigation.IdEspecialidadeNavigation.Especialidade1
                         }                    
                     }
                 })

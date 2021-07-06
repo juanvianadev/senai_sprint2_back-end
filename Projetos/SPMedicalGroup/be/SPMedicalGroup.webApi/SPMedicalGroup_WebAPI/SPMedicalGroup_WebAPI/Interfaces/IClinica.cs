@@ -31,7 +31,7 @@ namespace SPMedicalGroup_WebAPI.Interfaces
         /// Atualiza uma Clinica existente
         /// </summary>
         /// <param name="id">Id da Clinica que será atualizada</param>
-        /// <param name="clinicaAtualizada>Uma Clinica com as novas informações</param>
+        /// <param name="clinicaAtualizada">Uma Clinica com as novas informações</param>
         void Atualizar(int id, Clinica clinicaAtualizada);
 
         /// <summary>

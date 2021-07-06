@@ -51,7 +51,7 @@ namespace SPMedicalGroup_WebAPI.Repositories
                     IdTipoUsuarioNavigation = new TiposUsuario
                     {
                         IdTipoUsuario = u.IdTipoUsuarioNavigation.IdTipoUsuario,
-                        Titulo = u.IdTipoUsuarioNavigation.Titulo
+                        Tipo = u.IdTipoUsuarioNavigation.Tipo
                     }
                 })
                 .ToList();
